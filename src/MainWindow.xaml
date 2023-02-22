@@ -1,0 +1,93 @@
+﻿<ui:UiWindow
+        x:Class="EZAutoclickerWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EZAutoclickerWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="330" Width="600"
+        xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+        ExtendsContentIntoTitleBar="True"
+        WindowBackdropType="Mica"
+        WindowCornerPreference="Round"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="DarkGray"
+        Loaded="UiWindow_Loaded">
+    <StackPanel>
+        <!--Title Bar-->
+        <ui:TitleBar
+            x:Name="TitleBar"
+            Title="EZAutoclicker"
+            UseSnapLayout="True"
+            ShowMaximize="False">
+        </ui:TitleBar>
+
+        <!--Main Frame-->
+        <Border Padding="20">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!--Options-->
+                <StackPanel Margin="0 0 5 0">
+                    <TextBlock Margin="0 0 0 4" Text="Options" FontWeight="Bold" />
+                    <TextBox x:Name="Speed_TextBox" Text="1000" />
+                    <TextBlock Margin="0 4" TextWrapping="Wrap">
+                    Press Shift + CTRL + F10 to start.
+                    Place the speed, 1000 = one click every second
+                    </TextBlock>
+                    <CheckBox Unchecked="RightClick_CheckBox_Unchecked" Checked="RightClick_CheckBox_Checked" x:Name="RightClick_CheckBox" Margin="0 10 0 0" Content="Right click" />
+                    <CheckBox Unchecked="MiddleClick_CheckBox_Unchecked" Checked="MiddleClick_CheckBox_Checked" x:Name="MiddleClick_CheckBox" Content="Middle click" />
+                </StackPanel>
+
+                <!--Actions-->
+                <StackPanel Margin="5 0 0 0" Grid.Column="1">
+                    <TextBlock Margin="0 0 0 4" Text="Actions" FontWeight="Bold" />
+                    <ui:Button Click="Start_Button_Click" x:Name="Start_Button"  Icon="CursorClick24" Margin="0 0 0 10" HorizontalAlignment="Stretch" Content="Start" />
+                    <ui:Button Click="Stop_Button_Click" x:Name="Stop_Button" Icon="Stop24" HorizontalAlignment="Stretch" Content="Stop" />
+                    <ui:Button Click="Log_Button_Click" x:Name="Log_Button" Icon="Save24" Margin="0 10" HorizontalAlignment="Stretch" Content="Create Log" />
+                </StackPanel>
+            </Grid>
+        </Border>
+        <!--Links-->
+        <Border Padding="20">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel>
+                    <TextBlock FontWeight="Bold">
+                    Made by
+                <Hyperlink x:Name="Github_HyperLink" Click="Github_HyperLink_Click">
+                        <Hyperlink.Style>
+                            <Style TargetType="Hyperlink"
+                                   BasedOn="{StaticResource {x:Type Hyperlink}}">
+                            <Setter Property="Foreground" Value="White" />
+                            </Style>
+                        </Hyperlink.Style>
+                    Glumboi
+                </Hyperlink>
+                    </TextBlock>
+
+                    <TextBlock FontWeight="Bold" Grid.Column="1">
+                        Show me the repo of this
+                    <Hyperlink x:Name="Project_HyperLink" Click="Project_HyperLink_Click">
+                        <Hyperlink.Style>
+                            <Style TargetType="Hyperlink"
+                                   BasedOn="{StaticResource {x:Type Hyperlink}}">
+                            <Setter Property="Foreground" Value="White" />
+                            </Style>
+                        </Hyperlink.Style>
+                        project
+                    </Hyperlink>
+                    </TextBlock>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </StackPanel>
+</ui:UiWindow>
