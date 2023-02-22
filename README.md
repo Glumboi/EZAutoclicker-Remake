@@ -16,3 +16,6 @@ Yes, I re made another of my fisrt projects!
 # Changelog
 - V 1.0:
   - Initial release
+
+# GUI
+![alt text](https://i.imgur.com/nNuLUsA.png)
