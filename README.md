@@ -1,7 +1,8 @@
 <div align="center">
 
-<img src="https://i.imgur.com/0CoMX8e.png" width="312" height="100" />
+<img src="https://i.imgur.com/0CoMX8e.png" width="312" height="312" />
 
+<div align="left">
 
 # EZAutoclicker-Remake
 Yes, I re made another of my fisrt projects!
