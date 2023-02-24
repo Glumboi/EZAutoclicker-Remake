@@ -5,7 +5,7 @@
 <div align="left">
 
 # EZAutoclicker-Remake
-Yes, I re made another of my fisrt projects!
+Yes, I re made another of my fisrt projects! (It's also my first project using WPF)
 
 # What is new
 
